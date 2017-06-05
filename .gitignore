@@ -1,0 +1,9 @@
+# Uneeded compiled files
+*.py[cod]
+
+# Private files containing secrets
+client_list.py
+client_secrets.json
+
+# Uneeded folder from compiling
+dist/
