@@ -83,6 +83,24 @@ class ReadSpreadsheet:
 
 
 if __name__ == '__main__':
-    for each in client_list.ourClients:
-        a = ReadSpreadsheet(each, client_list.ourClients)
-        a.runAll()
+    for client in client_list.ourClients:
+        print client.title()
+    print "All\n"
+
+    chooseTheClient = raw_input("Which client?: ").lower()
+
+    if chooseTheClient == "all":
+        for each in client_list.ourClients:
+            a = ReadSpreadsheet(each, client_list.ourClients)
+            a.runAll()
+            exit(0)
+
+    try:
+        myKey = client_list.ourClients[chooseTheClient]
+    except KeyError:
+        print "No client %s exists" %chooseTheClient
+        exit(1)
+
+    a = ReadSpreadsheet(chooseTheClient, client_list.ourClients)
+    a.runAll()
+    exit(0)
