@@ -1,3 +1,3 @@
 # GDoc_Emails
 
-Produces CSVs of email addresses from Google Sheets
+## Produces CSVs of email addresses from Google Sheets
