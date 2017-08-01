@@ -93,7 +93,7 @@ if __name__ == '__main__':
         for each in client_list.ourClients:
             a = ReadSpreadsheet(each, client_list.ourClients)
             a.runAll()
-            exit(0)
+        exit(0)
 
     try:
         myKey = client_list.ourClients[chooseTheClient]
